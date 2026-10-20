@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniels Tailors &mdash; Halifax, NS</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: var(--font-body);
+  font-size: var(--text-17);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background: var(--bg);
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+}
+/* Masthead */
+.masthead{
+  border-bottom: 1px solid var(--ink);
+  padding: var(--sp-16) var(--sp-32);
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap: var(--sp-8) var(--sp-24);
+}
+.brand{
+  font-family: var(--font-display);
+  font-size: var(--text-21);
+  font-weight:700;
+  letter-spacing:0.01em;
+}
+.brand small{
+  display:block;
+  font-family: var(--font-body);
+  font-size: var(--text-13);
+  font-weight:400;
+  color: var(--muted);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+}
+.nav{
+  display:flex;
+  gap: var(--sp-24);
+  flex-wrap:wrap;
+}
+.nav a{
+  color: var(--ink);
+  text-decoration:none;
+  font-size: var(--text-15);
+  min-height:48px;
+  display:inline-flex;
+  align-items:center;
+}
+.nav a:hover{color: var(--accent); text-decoration:underline;}
+.nav a:focus-visible,
+a:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:2px;
+}
+/* Hero */
+.hero{
+  max-width: 1120px;
+  margin:0 auto;
+  padding: var(--sp-96) var(--sp-32) var(--sp-64);
+  border-bottom:1px solid var(--rule);
+}
+.hero .kicker{
+  font-family: var(--font-mono);
+  font-size: var(--text-13);
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color: var(--accent);
+  margin-bottom: var(--sp-16);
+}
+.hero h1{
+  font-family: var(--font-display);
+  font-size: var(--text-80);
+  line-height: var(--lh-display);
+  font-weight:700;
+  margin-bottom: var(--sp-24);
+}
+.hero p.lede{
+  font-size: var(--text-21);
+  color: var(--muted);
+  max-width: 60ch;
+}
+.address-line{
+  margin-top: var(--sp-32);
+  font-size: var(--text-15);
+  color: var(--zinc-700);
+  border-top:1px solid var(--rule);
+  padding-top: var(--sp-24);
+}
+/* Sections */
+.section{
+  max-width: 1120px;
+  margin:0 auto;
+  padding: var(--sp-64) var(--sp-32);
+  border-bottom:1px solid var(--rule);
+}
+.section h2{
+  font-family: var(--font-display);
+  font-size: var(--text-40);
+  line-height: var(--lh-display);
+  font-weight:700;
+  margin-bottom: var(--sp-16);
+}
+.section .standfirst{
+  font-size: var(--text-17);
+  color: var(--muted);
+  max-width: 65ch;
+  margin-bottom: var(--sp-32);
+}
+/* Services — numbered editorial list */
+.services{list-style:none}
+.services li{
+  display:grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--sp-16) var(--sp-24);
+  padding: var(--sp-24) 0;
+  border-top:1px solid var(--rule);
+  align-items:baseline;
+}
+.services li:last-child{border-bottom:1px solid var(--rule)}
+.services .num{
+  font-family: var(--font-mono);
+  font-size: var(--text-13);
+  color: var(--accent);
+  letter-spacing:0.08em;
+}
+.services h3{
+  font-family: var(--font-display);
+  font-size: var(--text-21);
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom: var(--sp-8);
+}
+.services p{color: var(--zinc-700); max-width:65ch}
+/* Hours + contact two-column */
+.cols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-48);
+  margin-top: var(--sp-32);
+}
+@media (max-width: 720px){
+  .cols{grid-template-columns:1fr}
+  .hero h1{font-size:var(--text-40)}
+}
+.hours-table{width:100%; border-collapse:collapse; font-size:var(--text-15)}
+.hours-table tr{border-top:1px solid var(--rule)}
+.hours-table tr:last-child{border-bottom:1px solid var(--rule)}
+.hours-table th,.hours-table td{padding: var(--sp-16) 0; text-align:left; font-weight:400}
+.hours-table th{color: var(--muted)}
+.hours-table td{text-align:right; font-family: var(--font-mono); font-size:var(--text-15)}
+.contact-block p{margin-bottom:var(--sp-16); color: var(--zinc-700)}
+.contact-block a{color:var(--accent)}
+/* Footer */
+.footer{
+  max-width: 1120px;
+  margin:0 auto;
+  padding: var(--sp-32);
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap: var(--sp-8) var(--sp-24);
+  font-size: var(--text-13);
+  color: var(--muted);
+}
+.footer .demo-note{font-family: var(--font-mono); letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="brand">
+    Daniels Tailors
+    <small>Tailors &amp; Dry Cleaning &mdash; Halifax</small>
+  </div>
+  <nav class="nav" aria-label="Page">
+    <a href="#services">Services</a>
+    <a href="#visit">Visit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="kicker">Park Lane Mall &mdash; Halifax, Nova Scotia</p>
+    <h1>Experience the fit.</h1>
+    <p class="lede">Daniels Tailors is a tailoring and dry-cleaning shop in Park Lane Mall, on Spring Garden Road in Halifax. Alterations, garment repair, and dry cleaning &mdash; under one roof.</p>
+    <p class="address-line">5657 Spring Garden Road, Park Lane Mall, Halifax, NS B3J 3R4 &middot; (902) 423-6330</p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>Services</h2>
+    <p class="standfirst">What the shop offers, in its own words.</p>
+    <ol class="services">
+      <li>
+        <span class="num">01</span>
+        <div>
+          <h3>Tailoring &amp; alterations</h3>
+          <p>Alterations to trousers, pants, and garments for a proper fit.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <div>
+          <h3>Dry cleaning</h3>
+          <p>Dry-cleaning service for everyday garments and delicate pieces.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <div>
+          <h3>Leather alterations &amp; repair</h3>
+          <p>Alteration and repair work on leather garments.</p>
+        </div>
+      </li>
+      <li>
+        <span class="num">04</span>
+        <div>
+          <h3>Garment repair</h3>
+          <p>Repairs that give clothing a longer life.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section" id="visit">
+    <h2>Visit</h2>
+    <p class="standfirst">Find the shop in Park Lane Mall on Spring Garden Road.</p>
+    <div class="cols">
+      <div>
+        <h2 style="font-size:var(--text-21); margin-bottom:var(--sp-16)">Hours</h2>
+        <table class="hours-table">
+          <tbody>
+            <tr><th>Monday &ndash; Saturday</th><td>9:00 AM &ndash; 6:00 PM</td></tr>
+            <tr><th>Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="contact-block">
+        <h2 style="font-size:var(--text-21); margin-bottom:var(--sp-16)">Address</h2>
+        <p>5657 Spring Garden Road<br>Park Lane Mall, M3 Dresden Row level<br>Box 192<br>Halifax, NS B3J 3R4</p>
+        <p>Phone: (902) 423-6330</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p class="standfirst">Get in touch about an alteration or a dry-cleaning order.</p>
+    <div class="contact-block">
+      <p>Phone: (902) 423-6330</p>
+      <p>Email: <a href="mailto:danielstailors@eastlink.ca">danielstailors@eastlink.ca</a></p>
+      <p>5657 Spring Garden Road, Park Lane Mall, Halifax, NS B3J 3R4</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>&copy; 2026 Daniels Tailors &mdash; Halifax, NS</span>
+  <span class="demo-note">Demo site &mdash; built from public information only.</span>
+</footer>
+
+</body>
+</html>
