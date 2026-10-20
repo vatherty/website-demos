@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe X &mdash; Moncton, NB</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --leader: 1px dotted var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+.address-line { font-size: var(--text-15); color: var(--muted); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.item { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); }
+.item:last-child { border-bottom: none; }
+.item .num { font-family: var(--font-display); font-size: var(--text-13); color: var(--accent); white-space: nowrap; }
+.item .name { font-weight: 700; white-space: nowrap; }
+.item .leader { flex: 1; border-bottom: var(--leader); }
+.item .desc { font-size: var(--text-15); color: var(--muted); }
+.hours-row { display: flex; gap: var(--sp-16); padding: var(--sp-8) 0; border-bottom: var(--border); }
+.hours-row:last-child { border-bottom: none; }
+.hours-row .days { font-weight: 700; min-width: 176px; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">1 Seymour Ct &middot; Moncton &middot; New Brunswick</p>
+  <h1>Cafe X</h1>
+  <p class="tagline">A cafe and coffee shop in Moncton, pouring Panamanian coffee by day and cofftails by night.</p>
+  <p class="address-line">1 Seymour Ct, Moncton, NB &middot; <a href="tel:+15068675008">(506) 867-5008</a></p>
+  <nav aria-label="Sections">
+    <a href="#offerings">Offerings</a>
+    <a href="#visit">Visit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="offerings" aria-labelledby="offerings-h">
+    <h2 id="offerings-h">Offerings</h2>
+    <p class="intro">Coffee, cocktails, and a place to stay awhile.</p>
+    <p class="section-note">From the business&rsquo;s public listings. Prices are not published &mdash; call for details.</p>
+    <div class="item"><span class="num">01</span><span class="name">Panamanian Coffee</span><span class="leader"></span><span class="desc">Coffee made with beans from Panama</span></div>
+    <div class="item"><span class="num">02</span><span class="name">Brown Sugar Caramel Shaken Espresso</span><span class="leader"></span><span class="desc">Espresso shaken with brown sugar and caramel</span></div>
+    <div class="item"><span class="num">03</span><span class="name">Mango Matcha Cloud</span><span class="leader"></span><span class="desc">A matcha drink with mango</span></div>
+    <div class="item"><span class="num">04</span><span class="name">Cofftails &amp; Handcrafted Cocktails</span><span class="leader"></span><span class="desc">Coffee-based cocktails, billed as the &ldquo;Home of the Cofftail&rdquo;</span></div>
+    <div class="item"><span class="num">05</span><span class="name">Live Jazz Nights</span><span class="leader"></span><span class="desc">Evenings with live jazz</span></div>
+    <div class="item"><span class="num">06</span><span class="name">Pet-Friendly Space &amp; Board Games</span><span class="leader"></span><span class="desc">Pets welcome; board games available</span></div>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <p class="section-note">Hours as listed in the business&rsquo;s public place data.</p>
+    <div class="hours-row"><span class="days">Sunday&ndash;Monday</span><span>8:00 AM &ndash; 5:00 PM</span></div>
+    <div class="hours-row"><span class="days">Tuesday&ndash;Thursday</span><span>8:00 AM &ndash; 11:00 PM</span></div>
+    <div class="hours-row"><span class="days">Friday&ndash;Saturday</span><span>8:00 AM &ndash; 12:00 AM</span></div>
+    <p style="margin: var(--sp-24) 0 0;">1 Seymour Ct, Moncton, NB</p>
+    <p>Phone: <a href="tel:+15068675008">(506) 867-5008</a></p>
+  </section>
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <p>Phone: <a href="tel:+15068675008">(506) 867-5008</a></p>
+    <p>1 Seymour Ct, Moncton, NB</p>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Demo site &mdash; built from public information only. Not the business&rsquo;s official site.</p>
+  <p>Cafe X &middot; 1 Seymour Ct, Moncton, NB</p>
+</footer>
+</body>
+</html>
