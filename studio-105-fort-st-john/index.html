@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio 105 Salon — Hair Salon, Barbershop &amp; Spa, Fort St. John, BC</title>
+<meta name="description" content="A hair salon, barbershop, and spa in Fort St. John, run by a born-and-raised local team.">
+<style>
+  /* ── Tokens (Editorial / NYT anchor) ────────────────────────────── */
+  :root {
+    --zinc-50:  #fafafa;
+    --zinc-100: #f4f4f5;
+    --zinc-200: #e4e4e7;
+    --zinc-300: #d4d4d8;
+    --zinc-500: #71717a;
+    --zinc-700: #3f3f46;
+    --zinc-900: #18181b;
+    --red-700:  #b91c1c;
+
+    --sp-8:   8px;
+    --sp-16: 16px;
+    --sp-24: 24px;
+    --sp-32: 32px;
+    --sp-48: 48px;
+    --sp-64: 64px;
+    --sp-96: 96px;
+    --sp-128: 128px;
+
+    --text-13: 13px;
+    --text-15: 15px;
+    --text-17: 17px;
+    --text-21: 21px;
+    --text-28: 28px;
+    --text-40: 40px;
+    --text-80: 80px;
+
+    --font-display: Georgia, "Source Serif Pro", "Source Serif", "Times New Roman", serif;
+    --font-body: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+
+  /* ── Reset / base ───────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--zinc-50);
+    color: var(--zinc-900);
+    font-family: var(--font-body);
+    font-size: var(--text-17);
+    line-height: 1.55;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+  }
+  p { margin: 0 0 var(--sp-16) 0; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  a { color: inherit; }
+  a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  a:focus-visible {
+    outline: 2px solid var(--red-700);
+    outline-offset: 2px;
+  }
+
+  .wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding-left: var(--sp-24);
+    padding-right: var(--sp-24);
+  }
+
+  /* ── Masthead / nav ─────────────────────────────────────────────── */
+  .masthead {
+    border-bottom: 1px solid var(--zinc-300);
+    background: var(--zinc-50);
+  }
+  .masthead-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 64px;
+    padding-top: var(--sp-8);
+    padding-bottom: var(--sp-8);
+  }
+  .wordmark {
+    font-family: var(--font-display);
+    font-size: var(--text-21);
+    text-decoration: none;
+    line-height: 1;
+  }
+  .nav { display: flex; align-items: center; gap: var(--sp-24); }
+  .nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-size: var(--text-15);
+    text-decoration: none;
+  }
+
+  /* ── Hero ───────────────────────────────────────────────────────── */
+  .hero {
+    padding-top: var(--sp-96);
+    padding-bottom: var(--sp-64);
+    border-bottom: 1px solid var(--zinc-300);
+  }
+  .hero h1 {
+    font-size: var(--text-80);
+    letter-spacing: -0.01em;
+    margin-bottom: var(--sp-24);
+  }
+  .hero .lede {
+    font-size: var(--text-21);
+    font-family: var(--font-display);
+    color: var(--zinc-700);
+    max-width: 640px;
+    margin-bottom: var(--sp-32);
+  }
+  .facts {
+    border-top: 1px solid var(--zinc-300);
+    padding-top: var(--sp-24);
+    font-size: var(--text-15);
+    color: var(--zinc-700);
+  }
+  .facts dt {
+    font-size: var(--text-13);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--zinc-500);
+    margin-bottom: var(--sp-8);
+  }
+  .facts dd { margin: 0 0 var(--sp-16) 0; }
+  .facts dd:last-child { margin-bottom: 0; }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--sp-24);
+  }
+
+  /* ── Sections ───────────────────────────────────────────────────── */
+  .section {
+    padding-top: var(--sp-64);
+    padding-bottom: var(--sp-64);
+    border-bottom: 1px solid var(--zinc-300);
+  }
+  .section-kicker {
+    font-size: var(--text-13);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--red-700);
+    margin-bottom: var(--sp-16);
+  }
+  .section h2 {
+    font-size: var(--text-40);
+    margin-bottom: var(--sp-32);
+  }
+
+  /* ── Services ───────────────────────────────────────────────────── */
+  .service-group { margin-bottom: var(--sp-48); }
+  .service-group:last-child { margin-bottom: 0; }
+  .service-group h3 {
+    font-size: var(--text-21);
+    margin-bottom: var(--sp-16);
+  }
+  .service-list li {
+    padding-top: var(--sp-16);
+    padding-bottom: var(--sp-16);
+    border-bottom: 1px solid var(--zinc-200);
+    font-size: var(--text-17);
+  }
+  .service-list li:last-child { border-bottom: none; }
+  .service-note {
+    font-size: var(--text-15);
+    color: var(--zinc-500);
+    margin-top: var(--sp-16);
+  }
+
+  /* ── Visit ──────────────────────────────────────────────────────── */
+  .visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--sp-32);
+  }
+  .visit-block h3 {
+    font-size: var(--text-21);
+    margin-bottom: var(--sp-16);
+  }
+  .visit-block p { font-size: var(--text-15); color: var(--zinc-700); }
+  .tel-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 48px;
+    font-size: var(--text-17);
+    color: var(--zinc-900);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* ── Footer ─────────────────────────────────────────────────────── */
+  .footer {
+    padding-top: var(--sp-48);
+    padding-bottom: var(--sp-48);
+    font-size: var(--text-13);
+    color: var(--zinc-500);
+  }
+  .footer p { margin-bottom: var(--sp-8); }
+
+  /* ── Responsive ─────────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .hero { padding-top: var(--sp-64); padding-bottom: var(--sp-48); }
+    .hero h1 { font-size: var(--text-40); }
+    .section { padding-top: var(--sp-48); padding-bottom: var(--sp-48); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <a class="wordmark" href="#top">Studio 105 Salon</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="wrap">
+      <h1 id="hero-heading">Studio 105 Salon</h1>
+      <p class="lede">A hair salon, barbershop, and spa in Fort St. John, run by a born-and-raised local team.</p>
+      <dl class="facts">
+        <div class="facts-grid">
+          <div>
+            <dt>Address</dt>
+            <dd>10712 101 Ave<br>Fort St. John, BC V1J 2B9</dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd><a href="tel:+12507851050">250-785-1050</a></dd>
+          </div>
+          <div>
+            <dt>Hours</dt>
+            <dd>Tue, Thu &amp; Fri 9&ndash;8; Wed 9&ndash;5; Sat 9&ndash;3<br>Closed Sun &amp; Mon<br><span>As publicly listed</span></dd>
+          </div>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="services" aria-labelledby="services-heading">
+    <div class="wrap">
+      <p class="section-kicker">What we do</p>
+      <h2 id="services-heading">Hair, barbershop &amp; spa</h2>
+
+      <div class="service-group">
+        <h3>Salon</h3>
+        <ul class="service-list">
+          <li>Advanced colour</li>
+          <li>Extension specialists</li>
+        </ul>
+      </div>
+
+      <div class="service-group">
+        <h3>Barbershop</h3>
+        <ul class="service-list">
+          <li>Barber services</li>
+        </ul>
+      </div>
+
+      <div class="service-group">
+        <h3>Spa &amp; skincare</h3>
+        <ul class="service-list">
+          <li>Eminence Organic Skin Care treatments</li>
+        </ul>
+        <p class="service-note">Eminence Organic Skin Care partner salon.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about" aria-labelledby="about-heading">
+    <div class="wrap">
+      <p class="section-kicker">About</p>
+      <h2 id="about-heading">From Fort St. John, for Fort St. John</h2>
+      <p>The team is born and raised in Fort St. John. Each year the salon holds a &ldquo;Cuts for Cans&rdquo; event, cutting hair in exchange for food bank donations.</p>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-heading">
+    <div class="wrap">
+      <p class="section-kicker">Visit</p>
+      <h2 id="visit-heading">Book a chair</h2>
+      <div class="visit-grid">
+        <div class="visit-block">
+          <h3>Address</h3>
+          <p>10712 101 Ave<br>Fort St. John, BC V1J 2B9</p>
+        </div>
+        <div class="visit-block">
+          <h3>Phone</h3>
+          <p><a class="tel-link" href="tel:+12507851050">250-785-1050</a></p>
+        </div>
+        <div class="visit-block">
+          <h3>Hours</h3>
+          <p>Tuesday 9:00 AM &ndash; 8:00 PM<br>Wednesday 9:00 AM &ndash; 5:00 PM<br>Thursday 9:00 AM &ndash; 8:00 PM<br>Friday 9:00 AM &ndash; 8:00 PM<br>Saturday 9:00 AM &ndash; 3:00 PM<br>Sunday &amp; Monday closed<br>As publicly listed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Demo website &mdash; built from public information for Studio 105 Salon.</p>
+    <p>Hours shown are as publicly listed.</p>
+  </div>
+</footer>
+
+</body>
+</html>
