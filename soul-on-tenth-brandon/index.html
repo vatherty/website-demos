@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOUL ON TENTH — Brandon, Manitoba</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --leader: 1px dotted var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.item { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); }
+.item:last-child { border-bottom: none; }
+.item .name { font-weight: 700; white-space: nowrap; }
+.item .leader { flex: 1; border-bottom: var(--leader); }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0 0 var(--sp-16); }
+.note-block p:last-child { margin-bottom: 0; }
+.contact-list { list-style: none; margin: var(--sp-32) 0 0; padding: 0; }
+.contact-list li { border-bottom: var(--border); }
+.contact-list li:first-child { border-top: var(--border); }
+.contact-list a { display: inline-flex; align-items: center; min-height: var(--sp-48); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-label { display: inline-block; min-width: 96px; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Brandon, Manitoba</p>
+  <h1>SOUL ON TENTH</h1>
+  <p class="tagline">Hair, nails, beauty.</p>
+  <nav aria-label="Sections">
+    <a href="#services">Services</a>
+    <a href="#hours">Hours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section aria-labelledby="services-h">
+    <h2 id="services-h">Services</h2>
+    <div class="fade-in">
+      <div class="item"><span class="name">Hair</span><span class="leader"></span></div>
+      <div class="item"><span class="name">Nails</span><span class="leader"></span></div>
+      <div class="item"><span class="name">Beauty</span><span class="leader"></span></div>
+    </div>
+    <p class="section-note">Services and pricing to be confirmed with the salon.</p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="section-note">Hours as publicly listed.</p>
+    <table>
+      <thead><tr><th>Day</th><th>Hours</th></tr></thead>
+      <tbody>
+        <tr><td>Monday</td><td>12 PM &ndash; 8 PM</td></tr>
+        <tr><td>Tuesday</td><td>10 AM &ndash; 6 PM</td></tr>
+        <tr><td>Wednesday</td><td>10 AM &ndash; 6 PM</td></tr>
+        <tr><td>Thursday</td><td>12 PM &ndash; 8 PM</td></tr>
+        <tr><td>Friday</td><td>10 AM &ndash; 3 PM</td></tr>
+        <tr><td>Saturday</td><td>10 AM &ndash; 3 PM</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <div class="note-block">
+      <p>118 10th Street<br>Brandon, MB R7A 4E6, Canada</p>
+    </div>
+    <ul class="contact-list">
+      <li><a href="tel:+12047286131"><span class="contact-label">Phone</span> 204-728-6131</a></li>
+      <li><a href="mailto:soulontenth@gmail.com"><span class="contact-label">Email</span> soulontenth@gmail.com</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; services and prices to be confirmed with SOUL ON TENTH.</p>
+  <p>SOUL ON TENTH &middot; 118 10th Street, Brandon, MB R7A 4E6, Canada</p>
+</footer>
+</body>
+</html>
