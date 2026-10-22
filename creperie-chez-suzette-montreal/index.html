@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crêperie Chez Suzette — Crêperie et fondues dans le Vieux-Montréal</title>
+<meta name="description" content="Crêperie Chez Suzette, crêperie et fondues dans le Vieux-Montréal. 3 Rue Saint-Paul E, Montréal QC H2Y 1E9. Tél. 514 874 1984.">
+<style>
+:root {
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  --measure: 64ch;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  font-size: var(--text-17);
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+header.site {
+  border-bottom: 1px solid var(--rule);
+}
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 var(--sp-24);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-24);
+  min-height: var(--sp-64);
+}
+.brand {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: var(--text-21);
+  color: var(--ink);
+  text-decoration: none;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: var(--sp-32);
+  list-style: none;
+}
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: var(--text-15);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-links a:hover { text-decoration: underline; }
+.hero {
+  padding: var(--sp-128) 0 var(--sp-96);
+  border-bottom: 1px solid var(--rule);
+}
+.kicker {
+  font-family: var(--mono);
+  font-size: var(--text-13);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--sp-24);
+}
+h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: var(--text-80);
+  line-height: 1.05;
+  margin-bottom: var(--sp-32);
+  max-width: 20ch;
+}
+.lede {
+  font-size: var(--text-21);
+  max-width: var(--measure);
+  color: var(--zinc-700);
+}
+.section {
+  padding: var(--sp-96) 0;
+  border-bottom: 1px solid var(--rule);
+}
+h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: var(--text-40);
+  line-height: 1.05;
+  margin-bottom: var(--sp-32);
+}
+.rule-label {
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-16);
+  font-family: var(--mono);
+  font-size: var(--text-13);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: var(--sp-24);
+}
+p.prose {
+  max-width: var(--measure);
+  margin-bottom: var(--sp-16);
+}
+.menu-list {
+  list-style: none;
+  border-top: 1px solid var(--rule);
+  max-width: var(--measure);
+}
+.menu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-24);
+  padding: var(--sp-24) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.menu-list .item {
+  font-family: var(--serif);
+  font-size: var(--text-21);
+  font-weight: 700;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-48);
+  max-width: var(--measure);
+}
+.contact-block dt {
+  font-family: var(--mono);
+  font-size: var(--text-13);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: var(--sp-8);
+}
+.contact-block dd {
+  font-size: var(--text-17);
+}
+.contact-block a {
+  color: var(--accent);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.contact-block a:hover { text-decoration: underline; }
+.cta-row {
+  display: flex;
+  gap: var(--sp-24);
+  flex-wrap: wrap;
+  margin-top: var(--sp-48);
+  max-width: var(--measure);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 var(--sp-32);
+  font-size: var(--text-17);
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  background: var(--bg);
+  border-radius: 0;
+}
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn:hover { text-decoration: underline; }
+a:focus-visible, .btn:focus-visible {
+  outline: var(--focus);
+  outline-offset: var(--focus-offset);
+}
+footer {
+  padding: var(--sp-48) 0 var(--sp-64);
+}
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--sp-24);
+  flex-wrap: wrap;
+}
+footer p {
+  font-size: var(--text-13);
+  color: var(--muted);
+  font-family: var(--mono);
+}
+@media (max-width: 640px) {
+  h1 { font-size: var(--text-40); }
+  h2 { font-size: var(--text-28); }
+  .hero { padding: var(--sp-64) 0 var(--sp-48); }
+  .section { padding: var(--sp-48) 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="#accueil">Crêperie Chez Suzette</a>
+    <nav aria-label="Navigation principale">
+      <ul class="nav-links">
+        <li><a href="#carte">La carte</a></li>
+        <li><a href="#coordonnees">Coordonnées</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="wrap">
+      <p class="kicker">Vieux-Montréal</p>
+      <h1>Crêperie Chez Suzette</h1>
+      <p class="lede">Crêperie et fondues au cœur du Vieux-Montréal, sur la rue Saint-Paul Est.</p>
+    </div>
+  </section>
+
+  <section class="section" id="carte">
+    <div class="wrap">
+      <p class="rule-label">La carte</p>
+      <h2>Crêpes et fondues</h2>
+      <ul class="menu-list">
+        <li>
+          <span class="item">Crêpes</span>
+        </li>
+        <li>
+          <span class="item">Fondues</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="coordonnees">
+    <div class="wrap">
+      <p class="rule-label">Coordonnées</p>
+      <h2>Nous trouver</h2>
+      <dl class="contact-grid">
+        <div class="contact-block">
+          <dt>Adresse</dt>
+          <dd>3 Rue Saint-Paul E<br>Montréal QC H2Y 1E9</dd>
+        </div>
+        <div class="contact-block">
+          <dt>Téléphone</dt>
+          <dd><a href="tel:+15148741984">514 874 1984</a></dd>
+        </div>
+        <div class="contact-block">
+          <dt>Courriel</dt>
+          <dd><a href="mailto:info@chezsuzette.ca">info@chezsuzette.ca</a></dd>
+        </div>
+      </dl>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+15148741984">Appeler</a>
+        <a class="btn" href="mailto:info@chezsuzette.ca">Nous écrire</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Crêperie Chez Suzette — 3 Rue Saint-Paul E, Montréal QC H2Y 1E9</p>
+    <p>Démonstration conceptuelle</p>
+  </div>
+</footer>
+
+</body>
+</html>
