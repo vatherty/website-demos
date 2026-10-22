@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capistrano Bistro &amp; Espresso Bar &mdash; Guelph, ON</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --leader: 1px dotted var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; flex-wrap: wrap; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+h2 .accent { color: var(--accent); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.cat-list { list-style: none; margin: var(--sp-24) 0 0; padding: 0; }
+.cat-list li { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); font-weight: 700; }
+.cat-list li:last-child { border-bottom: none; }
+.cat-list .leader { flex: 1; border-bottom: var(--leader); }
+.body-copy { margin: var(--sp-16) 0 0; }
+.body-copy + .body-copy { margin-top: var(--sp-16); }
+.contact-links { display: flex; flex-direction: column; gap: var(--sp-8); margin-top: var(--sp-24); }
+.contact-links a { display: inline-flex; align-items: center; min-height: var(--sp-48); color: var(--accent); }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (max-width: 640px) {
+  h1 { font-size: var(--text-40); }
+  h2 { font-size: var(--text-28); }
+}
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">St. George&rsquo;s Square &middot; Guelph, Ontario</p>
+  <h1>Capistrano Bistro &amp; Espresso Bar</h1>
+  <p class="tagline">A caf&eacute;&ndash;bistro and espresso bar serving the community since 1994.</p>
+  <nav aria-label="Sections">
+    <a href="#menu">Menu</a>
+    <a href="#patio">Patio</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">Made <span class="accent">from scratch</span></h2>
+    <p class="intro">Chef-created food, made from scratch in our kitchen.</p>
+    <ul class="cat-list">
+      <li>Pastries<span class="leader"></span></li>
+      <li>Panini<span class="leader"></span></li>
+      <li>Flatbreads<span class="leader"></span></li>
+      <li>Salads<span class="leader"></span></li>
+      <li>Quiche<span class="leader"></span></li>
+      <li>Soup<span class="leader"></span></li>
+    </ul>
+    <p class="section-note">Menu offerings and prices change &mdash; call ahead for the current menu.</p>
+  </section>
+  <section id="patio" aria-labelledby="patio-h">
+    <h2 id="patio-h">The patio</h2>
+    <p class="intro">A big patio overlooking St. George&rsquo;s Square.</p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="intro">Tuesday&ndash;Friday: 8:30&nbsp;am &ndash; 4:00&nbsp;pm</p>
+    <p class="intro">Saturday: 9:00&nbsp;am &ndash; 4:00&nbsp;pm</p>
+    <p class="section-note">As publicly listed.</p>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <p class="intro">St. George&rsquo;s Square, 42 Wyndham St N, Guelph, ON N1H 4E6</p>
+    <div class="contact-links">
+      <a href="tel:+15197638905">Call (519) 763-8905</a>
+    </div>
+  </section>
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <div class="contact-links">
+      <a href="mailto:info@capistranobistro.ca">Email info@capistranobistro.ca</a>
+    </div>
+    <p class="body-copy">St. George&rsquo;s Square, 42 Wyndham St N, Guelph, ON N1H 4E6 &middot; (519) 763-8905</p>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from Capistrano Bistro &amp; Espresso Bar&rsquo;s publicly posted information. Not the business&rsquo;s official site.</p>
+  <p>Capistrano Bistro &amp; Espresso Bar &middot; St. George&rsquo;s Square, 42 Wyndham St N, Guelph, ON N1H 4E6</p>
+</footer>
+</body>
+</html>
