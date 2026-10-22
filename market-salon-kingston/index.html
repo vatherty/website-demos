@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Market Salon — Kingston, Ontario</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --leader: 1px dotted var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, linear */
+  --dur-hover: 0ms;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.item { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); }
+.item:last-child { border-bottom: none; }
+.item .name { font-weight: 700; white-space: nowrap; }
+.item .leader { flex: 1; border-bottom: var(--leader); }
+.item .desc { font-size: var(--text-15); color: var(--muted); }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+.note-block .note { font-size: var(--text-15); color: var(--muted); margin-top: var(--sp-8); }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); min-height: var(--sp-48); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { font-size: var(--text-13); text-transform: uppercase; color: var(--muted); width: var(--sp-128); flex: none; }
+.contact-list a { min-height: var(--sp-48); display: inline-flex; align-items: center; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Kingston, Ontario</p>
+  <h1>The Market Salon</h1>
+  <p class="tagline">Hair salon on Bagot Street in downtown Kingston.</p>
+  <nav aria-label="Sections">
+    <a href="#services">Services</a>
+    <a href="#hours">Hours</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section aria-labelledby="about-h">
+    <h2 id="about-h">The Salon</h2>
+    <p class="intro">The Market Salon is a hair salon at 223 Bagot Street in Kingston, Ontario. The services listed here are taken from the salon&rsquo;s public listing.</p>
+  </section>
+  <section id="services" aria-labelledby="services-h">
+    <h2 id="services-h">Services</h2>
+    <p class="section-note">As publicly listed. Prices are not published.</p>
+    <div class="item">
+      <div><span class="name">Updos</span></div>
+      <span class="leader"></span>
+      <div class="desc">Price on request</div>
+    </div>
+    <div class="item">
+      <div><span class="name">Bang trims</span></div>
+      <span class="leader"></span>
+      <div class="desc">Price on request</div>
+    </div>
+    <div class="item">
+      <div><span class="name">Hairstyling</span></div>
+      <span class="leader"></span>
+      <div class="desc">Price on request</div>
+    </div>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="section-note">As publicly listed.</p>
+    <table>
+      <thead><tr><th>Day</th><th>Hours</th></tr></thead>
+      <tbody>
+        <tr><td>Tuesday – Friday</td><td>7:15am – 6:00pm</td></tr>
+        <tr><td>Saturday – Monday</td><td>Hours not published</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Contact</h2>
+    <ul class="contact-list">
+      <li><span class="label">Address</span><span>223 Bagot St, Kingston, ON K7L 3G3, Canada</span></li>
+      <li><span class="label">Phone</span><a href="tel:+16135492110">613-549-2110</a></li>
+      <li><span class="label">Email</span><a href="mailto:tmtarm@gmail.com">tmtarm@gmail.com</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; services, hours, and contact details are taken from the salon&rsquo;s public listing only.</p>
+  <p>The Market Salon &middot; 223 Bagot St, Kingston, ON K7L 3G3, Canada</p>
+</footer>
+</body>
+</html>
