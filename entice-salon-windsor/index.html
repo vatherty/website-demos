@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entice Salon — Windsor, ON</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-200: #e4e4e7;
+  --zinc-500: #71717a;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.service { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.service:last-child { border-bottom: none; }
+.service .name { font-weight: 700; }
+.service .desc { font-size: var(--text-15); color: var(--muted); margin: var(--sp-8) 0 0; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; }
+tr:last-child td { border-bottom: none; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-21); font-family: var(--font-display); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@media (prefers-reduced-motion: reduce) { * { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Windsor &middot; Ontario</p>
+  <h1>Entice Salon</h1>
+  <p class="tagline">A hair salon on Wyandotte Street East.</p>
+  <nav aria-label="Sections">
+    <a href="#services">Services</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section aria-labelledby="salon-h">
+    <h2 id="salon-h">The Salon</h2>
+    <p class="intro">Entice Salon is a hair salon at 311 Wyandotte St E in Windsor, Ontario. The salon works with all hair textures.</p>
+  </section>
+  <section id="services" aria-labelledby="services-h">
+    <h2 id="services-h">Services</h2>
+    <p class="section-note">As publicly listed.</p>
+    <div class="service">
+      <p class="name">Braids</p>
+      <p class="desc">Including cornrows, as publicly listed.</p>
+    </div>
+    <div class="service">
+      <p class="name">Weaves</p>
+    </div>
+    <div class="service">
+      <p class="name">Cuts</p>
+    </div>
+    <div class="service">
+      <p class="name">Colour</p>
+    </div>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="section-note">As publicly listed.</p>
+    <table>
+      <thead>
+        <tr><th scope="col">Day</th><th scope="col">Hours</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Tuesday</td><td>10:00am &ndash; 3:30pm</td></tr>
+        <tr><td>Wednesday</td><td>10:00am &ndash; 3:30pm</td></tr>
+        <tr><td>Thursday</td><td>10:00am &ndash; 3:30pm</td></tr>
+        <tr><td>Friday</td><td>10:00am &ndash; 3:30pm</td></tr>
+        <tr><td>Saturday</td><td>10:00am &ndash; 3:30pm</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li>
+        <span class="label">Address</span>
+        311 Wyandotte St E, Windsor, ON N9A 3H7, Canada
+      </li>
+      <li>
+        <span class="label">Phone</span>
+        <a href="tel:+15198009119">519-800-9119</a>
+      </li>
+      <li>
+        <span class="label">Email</span>
+        <a href="mailto:enticesalon@gmail.com">enticesalon@gmail.com</a>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built only from publicly listed information.</p>
+  <p>Entice Salon &middot; 311 Wyandotte St E, Windsor, ON N9A 3H7, Canada</p>
+</footer>
+</body>
+</html>
