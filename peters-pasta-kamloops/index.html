@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter&rsquo;s Pasta — Family-Run Italian Restaurant, Kamloops BC</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, linear */
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+.kicker .estd { color: var(--accent); font-weight: 700; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; min-height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: none; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: var(--text-17); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+.note-block p + p { margin-top: var(--sp-16); }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Kamloops &middot; British Columbia &middot; <span class="estd">Estd 1986</span></p>
+  <h1>Peter&rsquo;s Pasta</h1>
+  <p class="tagline">A family-run Italian restaurant on Victoria Street, known for fresh homemade pasta.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Peter&rsquo;s Pasta is a family-run Italian restaurant at 149 Victoria Street in Kamloops. Barry and Nicole Persaud carry on the legacy Nicole&rsquo;s parents began in 1986, cooking fresh homemade pasta for a dining room of locals&rsquo; favourites.</p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="section-note">As publicly listed. Hours can change; call ahead to confirm.</p>
+    <table>
+      <thead><tr><th>Day</th><th>Hours</th></tr></thead>
+      <tbody>
+        <tr><td>Tuesday &ndash; Saturday</td><td>5:00 PM &ndash; close</td></tr>
+        <tr><td>Sunday &ndash; Monday</td><td>Closed</td></tr>
+        <tr><td>Holidays</td><td>Closed</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li><span class="label">Address</span><span class="value">149 Victoria St, Kamloops, BC V2C 1Z4</span></li>
+      <li><span class="label">Phone</span><a href="tel:+12503728514">250.372.8514</a></li>
+      <li><span class="label">Take-out</span><span class="value">Take-out menu available &mdash; call to order.</span></li>
+      <li><span class="label">Gift certificates</span><span class="value">Gift certificates available.</span></li>
+    </ul>
+    <div class="note-block">
+      <p>This demo publishes only verified details &mdash; no menu items or prices are listed here.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from verified details only. Menu items and prices are not published here.</p>
+  <p>Peter&rsquo;s Pasta &middot; 149 Victoria St, Kamloops, BC V2C 1Z4 &middot; 250.372.8514</p>
+</footer>
+</body>
+</html>
