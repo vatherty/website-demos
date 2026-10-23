@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beauty In The Beach &mdash; Toronto, ON</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-700 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-700: #b91c1c;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-700);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --rule-double: 3px double var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--rule-double); margin: 0; }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0 0 var(--sp-32); }
+.quote { border-left: 2px solid var(--accent); margin: 0 0 var(--sp-32); padding: 0 0 0 var(--sp-24); font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); }
+.quote-attrib { font-family: var(--font-body); font-size: var(--text-13); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: var(--sp-16) 0 0; }
+.group-label { font-size: var(--text-13); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: var(--sp-32) 0 var(--sp-8); }
+.serve-list { list-style: none; margin: 0; padding: 0; }
+.serve-list li { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); flex-wrap: wrap; }
+.serve-list li:last-child { border-bottom: none; }
+.serve-list .name { font-weight: 700; white-space: nowrap; }
+.serve-list .leader { flex: 1; border-bottom: 1px dotted var(--rule); }
+.serve-list .desc { flex-basis: 100%; font-size: var(--text-15); color: var(--muted); margin: 0; }
+.hours-row { display: flex; align-items: baseline; gap: var(--sp-16); padding: var(--sp-16) 0; border-bottom: var(--border); flex-wrap: wrap; }
+.hours-row .days { font-weight: 700; }
+.hours-note { font-size: var(--text-15); color: var(--muted); margin: var(--sp-16) 0 0; }
+.contact-lines p { margin: 0 0 var(--sp-16); }
+.contact-lines .label { font-size: var(--text-13); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); display: block; margin-bottom: var(--sp-8); }
+.contact-lines a { display: inline-flex; align-items: center; min-height: var(--sp-48); text-decoration: none; }
+.contact-lines a:hover { text-decoration: underline; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+@media (max-width: 640px) {
+  h1 { font-size: var(--text-40); }
+  h2 { font-size: var(--text-28); }
+}
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Toronto &middot; Ontario</p>
+  <h1>Beauty In The Beach</h1>
+  <p class="tagline">A caf&eacute; and med spa at 1826 Queen Street East, in the Beaches neighbourhood &mdash; opened July 16, 2026.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#cafe">Caf&eacute;</a>
+    <a href="#medspa">Med Spa</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Beauty In The Beach is a neighbourhood caf&eacute; and med spa run by mothers who combined their passion for food, drink, and health and wellness.</p>
+    <blockquote class="quote">
+      <p>&ldquo;We are mothers who took their passion for food, drink, and health and wellness and combined them to create, Beauty in the Beach. Beauty in the Beach celebrates all things beautiful in local food, drink, and health and wellness.&rdquo;</p>
+      <p class="quote-attrib">In their own words</p>
+    </blockquote>
+  </section>
+  <section id="cafe" aria-labelledby="cafe-h">
+    <h2 id="cafe-h">Caf&eacute;</h2>
+    <p class="section-note">Items seen in the business&rsquo;s own posts; a full menu and prices are not published here.</p>
+    <p class="group-label">Baked goods</p>
+    <ul class="serve-list">
+      <li>
+        <span class="name">Rum cake</span><span class="leader"></span>
+        <p class="desc">By the slice, mini cakes, and rum donuts</p>
+      </li>
+      <li>
+        <span class="name">Blueberry &amp; pecan danish</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Croissants</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Muffins</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Cakes</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Cupcakes</span><span class="leader"></span>
+        <p class="desc">By local artisan Kupkates</p>
+      </li>
+      <li>
+        <span class="name">Bagels</span><span class="leader"></span>
+      </li>
+    </ul>
+    <p class="group-label">Drinks</p>
+    <ul class="serve-list">
+      <li>
+        <span class="name">Cold brew</span><span class="leader"></span>
+        <p class="desc">Including Pi&ntilde;a Colada cold brew and Mudslide Cold Brew</p>
+      </li>
+      <li>
+        <span class="name">Pumpkin spice latte</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Iced caramel latte</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Hot chocolate</span><span class="leader"></span>
+      </li>
+      <li>
+        <span class="name">Strawberry lemonade</span><span class="leader"></span>
+      </li>
+    </ul>
+  </section>
+  <section id="medspa" aria-labelledby="medspa-h">
+    <h2 id="medspa-h">Med Spa</h2>
+    <p class="intro">Beauty In The Beach includes a med spa, and consultations are free.</p>
+    <p class="section-note">Services and prices are not published here.</p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <div class="hours-row">
+      <span class="days">Monday &ndash; Friday</span>
+      <span>9:00 AM &ndash; 3:00 PM</span>
+    </div>
+    <div class="hours-row">
+      <span class="days">Saturday</span>
+      <span>10:00 AM &ndash; 2:00 PM</span>
+    </div>
+    <div class="hours-row">
+      <span class="days">Sunday</span>
+      <span>Closed</span>
+    </div>
+    <p class="hours-note">Hours as publicly listed.</p>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <div class="contact-lines">
+      <p><span class="label">Address</span>1826 Queen Street East, Toronto, ON</p>
+      <p><span class="label">Phone</span><a href="tel:+14166945757">+1 416-694-5757</a></p>
+      <p><span class="label">Instagram</span><a href="https://www.instagram.com/beautyin_thebeach/">@beautyin_thebeach</a></p>
+      <p><span class="label">Email</span><a href="mailto:bbeautyinthebeach@gmail.com">bbeautyinthebeach@gmail.com</a></p>
+      <p><span class="label">Website</span>None &mdash; Instagram + email only.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from Beauty In The Beach&rsquo;s publicly posted information. Not the business&rsquo;s official site.</p>
+  <p>Beauty In The Beach &middot; 1826 Queen Street East, Toronto, ON</p>
+</footer>
+</body>
+</html>
