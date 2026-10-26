@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabai Infusion &mdash; Asian Fusion Restaurant, Medicine Hat AB</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one red-800 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --red-800: #991b1b;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--red-800);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; min-height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: none; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: var(--text-17); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+.offering { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0 0 var(--sp-16); padding: 0 0 var(--sp-16); border-bottom: var(--border); }
+.offering:last-of-type { border-bottom: none; }
+.offering small { display: block; font-family: var(--font-body); font-size: var(--text-15); color: var(--muted); margin-top: var(--sp-8); }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Downtown &middot; Medicine Hat, Alberta</p>
+  <h1>Sabai Infusion</h1>
+  <p class="tagline">Authentic Thai cuisine in downtown Medicine Hat, served on rice or noodles.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#menu">Signatures</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Sabai Infusion is an Asian fusion restaurant at 638 2 St SE in Medicine Hat, offering dine-in, take-out, and delivery.</p>
+  </section>
+  <section id="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">Signatures</h2>
+    <p class="section-note">From publicly listed offerings only. No prices are published here.</p>
+    <p class="offering">Creamy crab puffs<small>Listed among the restaurant&rsquo;s offerings</small></p>
+    <p class="offering">Pad Thai<small>Listed among the restaurant&rsquo;s offerings</small></p>
+    <p class="offering">Buddha Beef<small>Listed among the restaurant&rsquo;s featured dishes</small></p>
+    <p class="offering">Vermicelli bowls<small>Listed among the restaurant&rsquo;s offerings</small></p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="section-note">As publicly listed. Hours can change; call ahead to confirm.</p>
+    <table>
+      <thead><tr><th>Day</th><th>Hours</th></tr></thead>
+      <tbody>
+        <tr><td>Monday &ndash; Friday</td><td>11:00 AM &ndash; 2:00 PM, 4:30 PM &ndash; 8:30 PM</td></tr>
+        <tr><td>Saturday</td><td>4:30 PM &ndash; 8:30 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li><span class="label">Address</span><span class="value">638 2 St SE, Medicine Hat, AB T1A 0C9</span></li>
+      <li><span class="label">Phone</span><a href="tel:+14035278040">(403) 527-8040</a></li>
+      <li><span class="label">Facebook</span><a href="http://www.facebook.com/Sabaiinfusions">Sabai Infusion on Facebook</a></li>
+    </ul>
+    <div class="note-block">
+      <p>Dine in, take out, or order delivery &mdash; call ahead to confirm today&rsquo;s hours.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from publicly listed details only. No prices are published here.</p>
+  <p>Sabai Infusion &middot; 638 2 St SE, Medicine Hat, AB T1A 0C9 &middot; (403) 527-8040</p>
+</footer>
+</body>
+</html>
