@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Coiffeurs &mdash; Salon de coiffure et barbier, Montr&eacute;al QC</title>
+<style>
+:root{
+  /* Type tokens — Editorial anchor */
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --text-13: 13px;
+  --text-15: 15px;
+  --text-17: 17px;
+  --text-21: 21px;
+  --text-28: 28px;
+  --text-40: 40px;
+  --text-80: 80px;
+  --lh-display: 1.05;
+  --lh-body: 1.55;
+  /* Color tokens — Editorial: zinc neutrals + one green-800 accent */
+  --zinc-50: #fafafa;
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-700: #3f3f46;
+  --zinc-900: #18181b;
+  --zinc-950: #09090b;
+  --green-800: #166534;
+  --bg: #ffffff;
+  --ink: var(--zinc-950);
+  --muted: var(--zinc-500);
+  --rule: var(--zinc-200);
+  --accent: var(--green-800);
+  --surface: var(--zinc-50);
+  /* Spacing tokens — Editorial, multiples of 8 */
+  --sp-8: 8px;
+  --sp-16: 16px;
+  --sp-24: 24px;
+  --sp-32: 32px;
+  --sp-48: 48px;
+  --sp-64: 64px;
+  --sp-96: 96px;
+  --sp-128: 128px;
+  --sp-192: 192px;
+  /* Layout tokens */
+  --measure: 720px;
+  --border: 1px solid var(--rule);
+  --radius: 0px;
+  --focus: 2px solid var(--accent);
+  --focus-offset: 2px;
+  /* Motion tokens — Editorial: 0ms hover, 200ms fade, linear */
+  --dur-hover: 0ms;
+  --dur-fade: 200ms;
+  --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); font-weight: 700; padding: 0 var(--sp-16) var(--sp-8) 0; border-bottom: var(--border); }
+td { padding: var(--sp-16) var(--sp-16) var(--sp-16) 0; min-height: var(--sp-48); border-bottom: var(--border); vertical-align: middle; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: none; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: var(--text-17); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+.offering { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0 0 var(--sp-16); padding: 0 0 var(--sp-16); border-bottom: var(--border); }
+.offering:last-of-type { border-bottom: none; }
+.offering small { display: block; font-family: var(--font-body); font-size: var(--text-15); color: var(--muted); margin-top: var(--sp-8); }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">D&Eacute;MO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Le Village &middot; Montr&eacute;al, Qu&eacute;bec</p>
+  <h1>Les Coiffeurs</h1>
+  <p class="tagline">Un salon de coiffure et un barbier dans le Village, &agrave; Montr&eacute;al.</p>
+  <nav aria-label="Sections">
+    <a href="#apropos">&Agrave; propos</a>
+    <a href="#services">Services</a>
+    <a href="#heures">Heures</a>
+    <a href="#visite">Visite</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="apropos" aria-labelledby="apropos-h">
+    <h2 id="apropos-h">&Agrave; propos</h2>
+    <p class="intro">Install&eacute; dans un ancien bar du Village, le salon Les Coiffeurs accueille une client&egrave;le de tout genre dans un d&eacute;cor &eacute;pur&eacute; et une ambiance d&eacute;contract&eacute;e.</p>
+  </section>
+  <section id="services" aria-labelledby="services-h">
+    <h2 id="services-h">Services</h2>
+    <p class="section-note">D&rsquo;apr&egrave;s les services publiquement d&eacute;crits. Les prix ne sont pas publi&eacute;s ici.</p>
+    <p class="offering">Mise en plis<small>Parmi les services haut de gamme offerts aux femmes</small></p>
+    <p class="offering">Coloration<small>Parmi les services haut de gamme offerts aux femmes</small></p>
+    <p class="offering">Coupes de style barbier<small>Avec pr&eacute;cision et soin, dont le fade, le crew cut et l&rsquo;undercut</small></p>
+    <p class="offering">Conseil sur le style<small>Pour d&eacute;finir le style qui r&eacute;pond le mieux aux besoins et au look d&eacute;sir&eacute;</small></p>
+  </section>
+  <section id="heures" aria-labelledby="heures-h">
+    <h2 id="heures-h">Heures</h2>
+    <p class="section-note">Heures telles qu&rsquo;indiqu&eacute;es publiquement. Les heures peuvent changer; appelez avant de vous d&eacute;placer pour confirmer.</p>
+    <table>
+      <thead><tr><th>Jour</th><th>Heures</th></tr></thead>
+      <tbody>
+        <tr><td>Mardi</td><td>11 h &ndash; 18 h</td></tr>
+        <tr><td>Mercredi</td><td>11 h &ndash; 19 h</td></tr>
+        <tr><td>Jeudi</td><td>11 h &ndash; 21 h</td></tr>
+        <tr><td>Vendredi</td><td>11 h &ndash; 21 h</td></tr>
+        <tr><td>Samedi</td><td>9 h &ndash; 17 h</td></tr>
+      </tbody>
+    </table>
+    <p class="section-note">Aucun horaire n&rsquo;est indiqu&eacute; publiquement pour le dimanche et le lundi dans les sources consult&eacute;es.</p>
+  </section>
+  <section id="visite" aria-labelledby="visite-h">
+    <h2 id="visite-h">Visite</h2>
+    <ul class="contact-list">
+      <li><span class="label">Adresse</span><span class="value">1285, rue Atateken, Montr&eacute;al, QC, Canada</span></li>
+      <li><span class="label">T&eacute;l&eacute;phone</span><a href="tel:+15146601915">514-660-1915</a></li>
+      <li><span class="label">Facebook</span><a href="https://m.facebook.com/lescoiffeurs1285/">Les Coiffeurs sur Facebook</a></li>
+    </ul>
+    <div class="note-block">
+      <p>Pour un rendez-vous ou une question sur un service, appelez le salon.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>D&eacute;mo de concept &mdash; construite &agrave; partir de renseignements publics seulement. Aucun prix n&rsquo;est publi&eacute; ici.</p>
+  <p>Les Coiffeurs &middot; 1285, rue Atateken, Montr&eacute;al, QC, Canada &middot; 514-660-1915</p>
+</footer>
+</body>
+</html>
