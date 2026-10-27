@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fox on the Run &mdash; Lunch &amp; Coffee Bar, Thunder Bay ON</title>
+<style>
+:root{--font-display:Georgia,'Times New Roman',serif;--font-body:system-ui,-apple-system,'Segoe UI',sans-serif;--zinc-50:#fafafa;--zinc-100:#f4f4f5;--zinc-200:#e4e4e7;--zinc-500:#71717a;--zinc-900:#18181b;--zinc-950:#09090b;--accent:#92400e;--bg:#ffffff;--ink:var(--zinc-950);--muted:var(--zinc-500);--rule:var(--zinc-200);--radius:0px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.55}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.badge{position:fixed;top:16px;right:16px;background:var(--zinc-950);color:#fff;font-size:13px;padding:8px 16px;border-radius:var(--radius)}
+.masthead{max-width:720px;margin:0 auto;padding:48px 24px 32px}
+.rule{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);height:8px}
+.kicker{font-size:13px;color:var(--muted);text-transform:uppercase;margin:24px 0 8px}
+h1{font-family:var(--font-display);font-weight:700;font-size:64px;line-height:1.05;margin:0}
+.tagline{font-family:var(--font-display);font-size:21px;line-height:1.55;margin:16px 0 0}
+nav{display:flex;gap:32px;margin:32px 0 0;flex-wrap:wrap}
+nav a{display:inline-flex;align-items:center;min-height:48px;font-size:15px;text-decoration:none}
+nav a:hover{text-decoration:underline}
+main{max-width:720px;margin:0 auto;padding:32px 24px 96px}
+section{margin-bottom:96px}
+h2{font-family:var(--font-display);font-weight:700;font-size:40px;line-height:1.05;margin:0 0 16px}
+.note{font-size:15px;color:var(--muted);margin:0 0 32px}
+.intro{font-family:var(--font-display);font-size:21px;line-height:1.55;margin:0}
+.item{font-family:var(--font-display);font-size:21px;line-height:1.55;margin:0 0 16px;padding:0 0 16px;border-bottom:1px solid var(--rule)}
+.item:last-of-type{border-bottom:none}
+.item small{display:block;font-family:var(--font-body);font-size:15px;color:var(--muted);margin-top:8px}
+.contact{list-style:none;margin:0;padding:0}
+.contact li{padding:16px 0;border-bottom:1px solid var(--rule)}
+.contact li:last-child{border-bottom:none}
+.contact .label{display:block;font-size:13px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.contact a{display:inline-block;min-height:48px;line-height:48px;font-size:17px;text-decoration:none}
+.contact a:hover{text-decoration:underline}
+.contact .value{display:inline-block;min-height:48px;line-height:48px}
+footer{max-width:720px;margin:0 auto;padding:0 24px 64px;font-size:13px;color:var(--muted)}
+footer p{margin:0 0 8px}
+</style>
+</head>
+<body>
+<div class="badge">Demo site</div>
+<header class="masthead">
+  <div class="rule"></div>
+  <p class="kicker">Thunder Bay, Ontario</p>
+  <h1>Fox on the Run</h1>
+  <p class="tagline">A lunch and coffee bar serving sandwiches, wraps, salads, soups, and catering in Thunder Bay.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#menu">On the menu</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule"></div>
+</header>
+<main>
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Fox on the Run is a lunch and coffee bar in Thunder Bay. It serves sandwiches, wraps, salads, and soups made with roasted meats, homestyle soups, and baked goods made from scratch, with Fair Trade coffees and teas. Eat in, take out, or catered.</p>
+  </section>
+  <section id="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">On the menu</h2>
+    <p class="note">Items as listed on the restaurant&rsquo;s own site.</p>
+    <p class="item">Thunder Bay Stacker<small>Shaved roasted beef, roasted turkey, smoked ham, in-house stacker sauce, lettuce, tomato, onions, and Swiss cheese on a 12-grain loaf.</small></p>
+    <p class="item">Roasted Chicken Wrap<small>Roasted chicken, dilled Gouda cheese, pesto and garlic mayo, lettuce, tomato, and diced avocado.</small></p>
+    <p class="item">Fox Turkey Club Salad<small>Turkey, cheddar cheese, avocado, and bacon.</small></p>
+    <p class="item">Soups and combos<small>Combos featuring a soup of the day with a sandwich, salad, or veggie plate.</small></p>
+    <p class="item">Catering<small>Breakfast, hot lunch pasta, cold lunch selections, and cocktail appetizers for events.</small></p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="note">As listed on the restaurant&rsquo;s own site.</p>
+    <ul class="contact">
+      <li><span class="label">Monday to Friday</span><span class="value">9:00 a.m. to 5:00 p.m.</span></li>
+      <li><span class="label">Saturday</span><span class="value">11:00 a.m. to 4:00 p.m.</span></li>
+      <li><span class="label">Sunday</span><span class="value">Closed</span></li>
+    </ul>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact">
+      <li><span class="label">Address</span><span class="value">1100 Memorial Ave, Thunder Bay, ON P7B 4A3</span></li>
+      <li><span class="label">Phone</span><a href="tel:+18076224211">807-622-4211</a></li>
+      <li><span class="label">Instagram</span><a href="https://www.instagram.com/foxontheruntbay/">@foxontheruntbay</a></li>
+      <li><span class="label">Facebook</span><a href="https://www.facebook.com/likethefox/">Fox on the Run on Facebook</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>Demo site prepared from public information only.</p>
+</footer>
+</body>
+</html>
