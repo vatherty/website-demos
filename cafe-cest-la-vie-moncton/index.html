@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café-bistro C'est la Vie &mdash; Café-Bistro, Moncton NB</title>
+<style>
+:root{
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --zinc-50: #fafafa; --zinc-100: #f4f4f5; --zinc-200: #e4e4e7; --zinc-500: #71717a; --zinc-700: #3f3f46; --zinc-900: #18181b; --zinc-950: #09090b;
+  --accent: #b91c1c;
+  --bg: #ffffff; --ink: var(--zinc-950); --muted: var(--zinc-500); --rule: var(--zinc-200); --surface: var(--zinc-50);
+  --sp-8: 8px; --sp-16: 16px; --sp-24: 24px; --sp-32: 32px; --sp-48: 48px; --sp-64: 64px; --sp-96: 96px;
+  --measure: 720px; --border: 1px solid var(--rule); --radius: 0px; --focus: 2px solid var(--accent); --focus-offset: 2px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--accent); color: var(--bg); font-size: 13px; padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.kicker { font-size: 13px; color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: 56px; line-height: 1.05; margin: 0; }
+.tagline { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: 15px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.05; margin: 0 0 var(--sp-16); }
+.section-note { font-size: 15px; color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: 0; }
+.offering { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: 0 0 var(--sp-16); padding: 0 0 var(--sp-16); border-bottom: var(--border); }
+.offering:last-of-type { border-bottom: none; }
+.offering small { display: block; font-family: var(--font-body); font-size: 15px; color: var(--muted); margin-top: var(--sp-8); }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: 13px; text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: 17px; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: 13px; color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+</style>
+</head>
+<body>
+<div class="badge">Demo site</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Downtown &middot; Moncton, New Brunswick</p>
+  <h1>Café-bistro C&rsquo;est la Vie</h1>
+  <p class="tagline">Where multiculturalism meets the local community.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#hours">Hours</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">A popular café-bistro in downtown Moncton. Its mission is to be the place where multiculturalism meets the local community &mdash; the best coffee and food around, and a space where artists and musicians can showcase their work.</p>
+  </section>
+  <section id="menu" aria-labelledby="menu-h">
+    <h2 id="menu-h">Menu</h2>
+    <p class="section-note">From their publicly listed offerings.</p>
+    <p class="offering">Bibimbap<small>Korean marinated beef, tofu, or smoked salmon over rice with veggies and fried egg</small></p>
+    <p class="offering">Strawberry latte<small>A house favourite, by customer accounts</small></p>
+    <p class="offering">Breakfast sandwiches &amp; bagels</p>
+    <p class="offering">Coffee &amp; tea<small>Quality coffees from around the world</small></p>
+  </section>
+  <section id="hours" aria-labelledby="hours-h">
+    <h2 id="hours-h">Hours</h2>
+    <p class="intro">Monday&ndash;Friday, 7:30am&ndash;4:00pm. Saturday &amp; Sunday, 9:00am&ndash;3:00pm.</p>
+    <p class="section-note">Hours as publicly listed.</p>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li><span class="label">Address</span><span class="value">785 Main St, Moncton, NB E1C 1E9</span></li>
+      <li><span class="label">Phone</span><a href="tel:5068540994">(506) 854-0994</a></li>
+      <li><span class="label">Email</span><a href="mailto:sishj@naver.com">sishj@naver.com</a></li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>Demo site built from publicly listed information only.</p>
+</footer>
+</body>
+</html>
