@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>London Fades Barbershop — London, Ontario</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  nav a { margin-left: 24px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; color: var(--ink); }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .price { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .price dt { font-weight: 700; margin-top: 16px; }
+  .price dd { margin: 0; color: var(--muted); }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours dt { font-weight: 700; margin-top: 16px; }
+  .hours dd { margin: 0; color: var(--muted); }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">London <span>Fades</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">531 Colborne St, London, Ontario</p>
+    <h1>London barbers you can count on.</h1>
+    <p class="lede">London Fades is a barbershop in the heart of London, Ontario, dedicated to men's haircuts — from fades and traditional cuts to retro styles, line ups, and beard trims. Walk in to a classic barbershop experience: a hot towel shave in a vintage, hand-upholstered leather chair, or a fresh razor line up.</p>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>London Fades is at 531 Colborne St, right in the heart of London, Ontario — easy to visit, with free parking, a bus stop at the front door, and minutes from downtown. Kyle Maynard is the owner and lead barber.</p>
+    <p>The shop celebrates the classic and authentic barbershop experience, and can create any look you're after.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Cut, Wash &amp; Style</h3>
+        <p>$35</p>
+      </div>
+      <div class="card">
+        <h3>Cut, Wash &amp; Style / Beard Sculpt</h3>
+        <p>$40+</p>
+      </div>
+      <div class="card">
+        <h3>Hot Lather Shave</h3>
+        <p>$40</p>
+      </div>
+      <div class="card">
+        <h3>Hot Lather Head Shave</h3>
+        <p>$35</p>
+      </div>
+      <div class="card">
+        <h3>Beard Sculpting / Trim</h3>
+        <p>$20</p>
+      </div>
+      <div class="card">
+        <h3>Hot Lather Line Up</h3>
+        <p>$15</p>
+      </div>
+    </div>
+    <p style="margin-top: 32px;">Specialities include fades, men's haircuts, traditional and retro styles, line ups, and trimming beards.</p>
+  </section>
+
+  <section id="hours">
+    <h2>Hours</h2>
+    <dl class="hours">
+      <dt>Monday</dt>
+      <dd>9:00 am – 7:00 pm</dd>
+      <dt>Tuesday</dt>
+      <dd>9:00 am – 7:00 pm</dd>
+      <dt>Wednesday</dt>
+      <dd>10:00 am – 7:00 pm</dd>
+      <dt>Thursday</dt>
+      <dd>9:00 am – 7:00 pm</dd>
+      <dt>Friday</dt>
+      <dd>10:00 am – 8:00 pm</dd>
+      <dt>Saturday</dt>
+      <dd>9:00 am – 5:00 pm</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>531 Colborne St<br>London, ON N6B 2T7</p>
+      <p>Call or text: 226-448-4642<br>Email: info@londonfades.com</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>London Fades Barbershop — 531 Colborne St, London, ON N6B 2T7 — 226-448-4642</p>
+    <p>Demonstration prepared from public information only.</p>
+  </div>
+</footer>
+</body>
+</html>
