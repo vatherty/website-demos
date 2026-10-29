@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Mad Greek — Greek food in Moose Jaw</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  nav a { margin-left: 24px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; color: var(--ink); }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours dt { font-weight: 700; margin-top: 16px; }
+  .hours dd { margin: 0; color: var(--muted); }
+  blockquote { margin: 0 0 24px; padding-left: 24px; border-left: 3px solid var(--line); }
+  blockquote p { font-style: italic; }
+  blockquote cite { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); font-style: normal; }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">The Mad <span>Greek</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">Moose Jaw, Saskatchewan — Serving since 2002</p>
+    <h1>Fresh, made-to-order Greek food, with a sauce people travel for.</h1>
+    <p class="lede">The Mad Greek has been serving Moose Jaw and surrounding areas since 2002, with authentic Greek food and a signature Greek sauce so popular, people travel hundreds of miles just to try it.</p>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>The Mad Greek serves fresh, made-to-order cuisine in Moose Jaw. Stop in or order delivery, and keep the restaurant in mind for catering at your next event.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Menu</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Greek dishes</h3>
+        <p>Authentic Greek foods, including the signature Greek sauce, alongside ribs and other Greek dishes.</p>
+      </div>
+      <div class="card">
+        <h3>Pizza, pasta &amp; lasagna</h3>
+        <p>Pizza, lasagna and pastas, plus soups, salads and poutine.</p>
+      </div>
+      <div class="card">
+        <h3>Appetizers &amp; more</h3>
+        <p>Appetizers, garlic and cheese toast, and more — all made to order.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What customers say</h2>
+    <blockquote>
+      <p>“John and his team are great! Great atmosphere — the music takes you on a mini vacation.”</p>
+      <cite>— Gabrielle Belanger</cite>
+    </blockquote>
+    <blockquote>
+      <p>“We ordered take out tonight to celebrate our boys' birthday and they made it extra special!”</p>
+      <cite>— Nicole Radfelder</cite>
+    </blockquote>
+  </section>
+
+  <section id="hours">
+    <h2>Hours</h2>
+    <dl class="hours">
+      <dt>Open every day</dt>
+      <dd>Monday – Sunday: 11:00 am – 11:00 pm</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>925 Main Street North,<br>Moose Jaw, SK S6H 0W9</p>
+      <p>Phone: 1-(306) 693-4333<br>Email: johnithemadgreek@gmail.com</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>The Mad Greek — 925 Main Street North, Moose Jaw, SK S6H 0W9 — 1-(306) 693-4333</p>
+    <p>Demonstration prepared from public information only.</p>
+  </div>
+</footer>
+</body>
+</html>
