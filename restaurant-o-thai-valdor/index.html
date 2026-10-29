@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ô Thaï — Fine cuisine asiatique à Val-d'Or</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  nav a { margin-left: 24px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; color: var(--ink); }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours dt { font-weight: 700; margin-top: 16px; }
+  .hours dd { margin: 0; color: var(--muted); }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">Ô <span>Thaï</span></div>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#menu">Menu</a>
+      <a href="#heures">Heures</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">Val-d'Or, Québec — Ouvert depuis 2015 sur la 3e Avenue</p>
+    <h1>Fine cuisine asiatique, du wok au grill.</h1>
+    <p class="lede">Faites voyager vos papilles avec nous&nbsp;! Notre menu thaïlandais est inspiré de recettes authentiques, élaboré avec des ingrédients frais et de qualité chaque jour — un mélange de saveurs sucrées et salées.</p>
+  </div>
+
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Ouvert depuis 2015 sur la 3e Avenue à Val-d'Or, le Ô Thaï est né d'une passion de bien manger, bien boire et rassembler, et d'une vision d'apporter au centre-ville une saveur différente. Les recettes du menu initial ont été développées avec la chef thaïe Sirina, avec les méthodes traditionnelles de la Thaïlande.</p>
+    <p>Les sauces et les plats sont préparés et cuisinés à la façon authentique, avec un souci de la fraîcheur et du goût. Au fil du temps, Maxime, le chef actuel, ajoute des nouveautés qui bonifient le menu au gré de ses créations. L'objectif de rassembler reste&nbsp;: rassembler les gens autour d'un bon repas, rassembler les saveurs dans des plats goûteux, et rassembler une équipe dévouée qui aime venir travailler ensemble.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Au menu</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Entrées</h3>
+        <p>Soupe wonton, soupe tom yum, rouleaux impériaux végétariens ou au porc, dumplings au porc, salade de mangue, calmars frits et crevettes tempura.</p>
+      </div>
+      <div class="card">
+        <h3>Nouilles et riz</h3>
+        <p>Pad thaï, pad sew et chow mein, servis avec légumes, tofu, arachides et œuf selon le plat — ainsi que du riz frit au poulet, au bœuf ou aux crevettes.</p>
+      </div>
+      <div class="card">
+        <h3>Plats et caris</h3>
+        <p>Général tao, poulet ananas, poulet aux arachides, bœuf brocoli, sauté de crevettes et cashew, et caris vert, rouge et masaman au poulet, au bœuf, aux crevettes ou aux fruits de mer.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px;">On passe du wok au grill, on vous sert un tartare ou une bavette de bœuf, tout en vous servant nos classiques&nbsp;: notre pad thaï, nos fameux rouleaux impériaux, nos grillades et notre cari réconfortant. Les commandes pour emporter sont prises pour tous, même les groupes.</p>
+  </section>
+
+  <section id="heures">
+    <h2>Heures d'ouverture</h2>
+    <dl class="hours">
+      <dt>Lundi</dt>
+      <dd>Fermé</dd>
+      <dt>Du mardi au vendredi</dt>
+      <dd>11&nbsp;h à 13&nbsp;h&nbsp;30 et 16&nbsp;h à 20&nbsp;h</dd>
+      <dt>Samedi</dt>
+      <dd>16&nbsp;h à 20&nbsp;h</dd>
+      <dt>Dimanche</dt>
+      <dd>Fermé</dd>
+    </dl>
+    <p class="hours" style="color: var(--muted);">Les heures de fermeture sont basées selon l'achalandage.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>810, 3e Avenue,<br>Val-d'Or (Québec) J9P 1S9</p>
+      <p>Téléphone&nbsp;: (819) 874-8424<br>Courriel&nbsp;: restaurantothaivaldor@outlook.com</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Ô Thaï — 810, 3e Avenue, Val-d'Or (Québec) J9P 1S9 — (819) 874-8424</p>
+    <p>Démonstration préparée à partir d'informations publiques seulement.</p>
+  </div>
+</footer>
+</body>
+</html>
