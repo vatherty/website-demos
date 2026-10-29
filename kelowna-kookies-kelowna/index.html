@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelowna Kookies &mdash; Custom Sugar Cookies, Kelowna BC</title>
+<style>
+:root{
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-13: 13px; --text-15: 15px; --text-17: 17px; --text-21: 21px; --text-28: 28px; --text-40: 40px; --text-80: 80px;
+  --lh-display: 1.05; --lh-body: 1.55;
+  --zinc-50: #fafafa; --zinc-100: #f4f4f5; --zinc-200: #e4e4e7; --zinc-500: #71717a; --zinc-900: #18181b; --zinc-950: #09090b;
+  --accent: #6b4226;
+  --bg: #ffffff; --ink: var(--zinc-950); --muted: var(--zinc-500); --rule: var(--zinc-200);
+  --sp-8: 8px; --sp-16: 16px; --sp-24: 24px; --sp-32: 32px; --sp-48: 48px; --sp-64: 64px; --sp-96: 96px;
+  --measure: 720px; --border: 1px solid var(--rule); --radius: 0px; --focus: 2px solid var(--accent); --focus-offset: 2px;
+  --dur-fade: 200ms; --ease: linear;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--text-17); line-height: var(--lh-body); }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: var(--text-13); padding: var(--sp-8) var(--sp-16); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: var(--text-13); color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-80); line-height: var(--lh-display); margin: 0; }
+.tagline { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: var(--text-15); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--text-40); line-height: var(--lh-display); margin: 0 0 var(--sp-16); }
+.section-note { font-size: var(--text-15); color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0; }
+.offering { font-family: var(--font-display); font-size: var(--text-21); line-height: var(--lh-body); margin: 0 0 var(--sp-16); padding: 0 0 var(--sp-16); border-bottom: var(--border); }
+.offering:last-of-type { border-bottom: none; }
+.offering small { display: block; font-family: var(--font-body); font-size: var(--text-15); color: var(--muted); margin-top: var(--sp-8); }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: var(--text-13); text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: var(--text-17); text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: var(--text-13); color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.fade-in { animation: fade var(--dur-fade) var(--ease); }
+@media (prefers-reduced-motion: reduce) { .fade-in { animation: none; } }
+</style>
+</head>
+<body>
+<div class="badge">DEMO</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">Home bakery &middot; Kelowna, British Columbia</p>
+  <h1>Kelowna Kookies</h1>
+  <p class="tagline">Custom sugar cookies for all of your special events and occasions.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#offerings">What she makes</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main class="fade-in">
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Kelowna Kookies is a home bakery in Kelowna, BC. Nicole makes custom sugar cookies for special events and occasions, working with clients to bring their ideas to life &mdash; or to re-create something they&rsquo;ve seen elsewhere.</p>
+  </section>
+  <section id="offerings" aria-labelledby="offerings-h">
+    <h2 id="offerings-h">What she makes</h2>
+    <p class="section-note">From their publicly listed offerings. Prices and ordering live with the bakery.</p>
+    <p class="offering">Personalized cookies<small>Custom designs for your event</small></p>
+    <p class="offering">Character-themed sugar cookies<small>As listed</small></p>
+    <p class="offering">Corporate logo custom cookies<small>Branded cookies for businesses</small></p>
+    <p class="offering">Cookie decorating classes<small>Learn the craft, as listed</small></p>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li><span class="label">Where</span><span class="value">Kelowna, BC, Canada</span></li>
+      <li><span class="label">Hours</span><span class="value">Monday &ndash; Friday, 9:00 AM &ndash; 5:00 PM (as publicly listed)</span></li>
+      <li><span class="label">Instagram</span><a href="https://www.instagram.com/kelownakookies/">@kelownakookies</a></li>
+    </ul>
+    <div class="note-block">
+      <p>A home bakery &mdash; reach out on Instagram to order or ask about a design.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from publicly listed details only. Prices and ordering are not published here.</p>
+  <p>Kelowna Kookies &middot; Kelowna, BC, Canada</p>
+</footer>
+</body>
+</html>
