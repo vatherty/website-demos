@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Table à Mo — Cuisine bistro inspirée à Granby</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; letter-spacing: -0.01em; }
+  .brand span { color: var(--accent); }
+  nav a { margin-left: 24px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; color: var(--ink); }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours dt { font-weight: 700; margin-top: 16px; }
+  .hours dd { margin: 0; color: var(--muted); }
+  blockquote { margin: 0 0 24px; padding-left: 24px; border-left: 3px solid var(--line); }
+  blockquote p { font-style: italic; }
+  blockquote cite { font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); font-style: normal; }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 16px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">La Table <span>à Mo</span></div>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#heures">Heures</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">Granby, Québec — Depuis le 27 septembre 2016</p>
+    <h1>Une cuisine bistro inspirée, dans une ambiance conviviale et chaleureuse.</h1>
+    <p class="lede">La Table à Mo a pignon sur rue sur la Principale à Granby. On y savoure une bonne cuisine du marché, un service jeune et dynamique, et des plats inspirés, créatifs et goûteux.</p>
+  </div>
+
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>D’abord connu pour le service traiteur La Table à Mo, le restaurant a ajouté tables et chaises pour vous recevoir dans sa cuisine. Le chef exécutif Marc De Bellefeuille, chef propriétaire, compile plus d’une vingtaine d’années derrière les fourneaux. Après quelques années à travailler à Montréal, il quitte la grande ville pour s’installer dans les Cantons-de-l’Est en 2006.</p>
+    <p>Après avoir été chef propriétaire du restaurant Le Plato Bar à Tapas, il fait la rencontre de Moreno Tomei, son chef et mentor, avec qui il travaille depuis une douzaine d’années.</p>
+  </section>
+
+  <section id="services">
+    <h2>Menus et services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Menu salle à manger</h3>
+        <p>Un petit resto de quartier où l’on prend plaisir à vous cuisiner des assiettes toutes aussi délicieuses que magnifiques, le tout dans une ambiance conviviale. Découvrez notre cuisine du marché&nbsp;!</p>
+      </div>
+      <div class="card">
+        <h3>Les boîtes à lunch</h3>
+        <p>Le chef vous suggère un menu gastronomique 3 services pour emporter. 25&nbsp;$ par personne, minimum 2 personnes. Cueillette du mardi au samedi de 11&nbsp;h&nbsp;30 à 17&nbsp;h&nbsp;30. Livraison disponible.</p>
+      </div>
+      <div class="card">
+        <h3>Traiteur et chef à domicile</h3>
+        <p>La Table à Mo, c’est aussi un service de chef à domicile et un service de traiteur. Pensez à nous pour vos petits et grands événements importants.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ce que les clients en disent</h2>
+    <blockquote>
+      <p>«&nbsp;Nous avons A-D-O-R-É notre visite. Le service était impeccable, l’endroit est chaleureux avec la vue sur la cuisine et que dire des plats savoureux. J’ai pris la crêpe japonaise en entrée et j’ai jamais mangé quelque chose d’aussi bon.&nbsp;»</p>
+      <cite>— Wille O.</cite>
+    </blockquote>
+    <blockquote>
+      <p>«&nbsp;Nous avons adoré tous nos plats de l’entrée aux desserts incluant les plats de pâtes fraîches pour les enfants&nbsp;!&nbsp;»</p>
+      <cite>— Chantal Barakatt</cite>
+    </blockquote>
+    <blockquote>
+      <p>«&nbsp;J’ai adoré mon repas, tartare de bœuf explosion de saveur. Risotto au crevettes goûteux aromatiques. Le gâteau Tres leche, le gâteau divin et préparé sur place.&nbsp;»</p>
+      <cite>— Marilyn Labbé</cite>
+    </blockquote>
+  </section>
+
+  <section id="heures">
+    <h2>Heures d’ouverture</h2>
+    <dl class="hours">
+      <dt>Quand venir dîner&nbsp;?</dt>
+      <dd>Lundi&nbsp;: fermé</dd>
+      <dd>Mardi au vendredi&nbsp;: 11&nbsp;h&nbsp;30 à 14&nbsp;h</dd>
+      <dd>Dimanche&nbsp;: fermé</dd>
+      <dt>Quand venir souper&nbsp;?</dt>
+      <dd>Lundi au mercredi&nbsp;: fermé</dd>
+      <dd>Jeudi au samedi&nbsp;: 17&nbsp;h&nbsp;30 à 21&nbsp;h (selon l’achalandage)</dd>
+      <dd>Dimanche&nbsp;: fermé</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>118, rue Principale,<br>Granby (Québec) J2G 2V2</p>
+      <p>Téléphone&nbsp;: (450) 372-0043<br>Courriel&nbsp;: info@latableamo.com</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>La Table à Mo — 118, rue Principale, Granby (Québec) J2G 2V2 — (450) 372-0043</p>
+    <p>Démonstration préparée à partir d’informations publiques seulement.</p>
+  </div>
+</footer>
+</body>
+</html>
