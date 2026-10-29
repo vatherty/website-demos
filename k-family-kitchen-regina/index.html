@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The K Family Kitchen &mdash; Regina, SK</title>
+<style>
+:root{
+  --font-display: Georgia, 'Iowan Old Style', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --zinc-50: #fafafa; --zinc-100: #f4f4f5; --zinc-200: #e4e4e7; --zinc-500: #71717a; --zinc-700: #3f3f46; --zinc-900: #18181b; --zinc-950: #09090b;
+  --accent: #b91c1c;
+  --bg: #ffffff; --ink: var(--zinc-950); --muted: var(--zinc-500); --rule: var(--zinc-200); --surface: var(--zinc-50);
+  --sp-8: 8px; --sp-16: 16px; --sp-24: 24px; --sp-32: 32px; --sp-48: 48px; --sp-64: 64px; --sp-96: 96px;
+  --measure: 720px; --border: 1px solid var(--rule); --radius: 0px; --focus: 2px solid var(--accent); --focus-offset: 2px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.55; }
+a { color: inherit; }
+a:focus-visible { outline: var(--focus); outline-offset: var(--focus-offset); }
+.badge { position: fixed; top: var(--sp-16); right: var(--sp-16); background: var(--zinc-950); color: var(--bg); font-size: 13px; padding: var(--sp-8) var(--sp-16); border-radius: var(--radius); }
+.masthead { max-width: var(--measure); margin: 0 auto; padding: var(--sp-48) var(--sp-24) var(--sp-32); }
+.rule-double { border-top: var(--border); border-bottom: var(--border); height: var(--sp-8); }
+.rule-single { border-top: var(--border); }
+.kicker { font-size: 13px; color: var(--muted); text-transform: uppercase; margin: var(--sp-24) 0 var(--sp-8); }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: 56px; line-height: 1.05; margin: 0; }
+.tagline { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: var(--sp-16) 0 0; }
+nav { display: flex; gap: var(--sp-32); margin: var(--sp-32) 0 0; flex-wrap: wrap; }
+nav a { display: inline-flex; align-items: center; min-height: var(--sp-48); font-size: 15px; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+main { max-width: var(--measure); margin: 0 auto; padding: var(--sp-32) var(--sp-24) var(--sp-96); }
+section { margin-bottom: var(--sp-96); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.05; margin: 0 0 var(--sp-16); }
+.section-note { font-size: 15px; color: var(--muted); margin: 0 0 var(--sp-32); }
+.intro { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: 0; }
+.contact-list { list-style: none; margin: 0; padding: 0; }
+.contact-list li { padding: var(--sp-16) 0; border-bottom: var(--border); }
+.contact-list li:last-child { border-bottom: none; }
+.contact-list .label { display: block; font-size: 13px; text-transform: uppercase; color: var(--muted); margin-bottom: var(--sp-8); }
+.contact-list a { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); font-size: 17px; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+.contact-list .value { display: inline-block; min-height: var(--sp-48); line-height: var(--sp-48); }
+.offering { font-family: var(--font-display); font-size: 21px; line-height: 1.55; margin: 0 0 var(--sp-16); padding: 0 0 var(--sp-16); border-bottom: var(--border); }
+.offering:last-of-type { border-bottom: none; }
+.offering small { display: block; font-family: var(--font-body); font-size: 15px; color: var(--muted); margin-top: var(--sp-8); }
+.note-block { border-top: var(--border); border-bottom: var(--border); padding: var(--sp-24) 0; }
+.note-block p { margin: 0; }
+footer { max-width: var(--measure); margin: 0 auto; padding: 0 var(--sp-24) var(--sp-64); font-size: 13px; color: var(--muted); }
+footer p { margin: 0 0 var(--sp-8); }
+</style>
+</head>
+<body>
+<div class="badge">Demo site</div>
+<header class="masthead">
+  <div class="rule-double"></div>
+  <p class="kicker">North Regina &middot; Regina, Saskatchewan</p>
+  <h1>The K Family Kitchen</h1>
+  <p class="tagline">Home-style meals, made to order, in a warm and welcoming room where the coffee is always on.</p>
+  <nav aria-label="Sections">
+    <a href="#about">About</a>
+    <a href="#meals">Meals</a>
+    <a href="#visit">Visit</a>
+  </nav>
+  <div class="rule-double"></div>
+</header>
+<main>
+  <section id="about" aria-labelledby="about-h">
+    <h2 id="about-h">About</h2>
+    <p class="intro">Since the 1980&rsquo;s, The K Family Kitchen has been serving home-style meals to Regina. The menu is completely customizable and always made-to-order, with generous portions and convenient prices &mdash; and everyone leaves full and satisfied.</p>
+  </section>
+  <section id="meals" aria-labelledby="meals-h">
+    <h2 id="meals-h">Meals</h2>
+    <p class="section-note">From the restaurant&rsquo;s own site. Specific dishes and prices live with the restaurant.</p>
+    <p class="offering">Breakfast<small>Served all day, made to order.</small></p>
+    <p class="offering">Lunch<small>Home-style cooking, prepared exactly how you want it.</small></p>
+    <p class="offering">Dinner<small>Dine in, take out, or delivery.</small></p>
+  </section>
+  <section id="visit" aria-labelledby="visit-h">
+    <h2 id="visit-h">Visit</h2>
+    <ul class="contact-list">
+      <li><span class="label">Address</span><span class="value">2302 9th Ave N, Regina, SK S4R 8C5</span></li>
+      <li><span class="label">Phone</span><span class="value">306-359-9949</span></li>
+      <li><span class="label">Facebook</span><a href="https://www.facebook.com/KFamilyKitchen/">KFamilyKitchen</a></li>
+      <li><span class="label">Hours</span><span class="value">Monday through Sunday, 6:30am &ndash; 6:30pm. Holidays 7am &ndash; 3pm. Closed Christmas Day.</span></li>
+      <li><span class="label">Ordering</span><span class="value">Dine-in, take-out, and delivery. Also on Skip The Dishes.</span></li>
+    </ul>
+    <div class="note-block">
+      <p>The full menu and prices live with the restaurant.</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="rule-single"></div>
+  <p>Concept demo &mdash; built from publicly listed details only.</p>
+  <p>The K Family Kitchen &middot; 2302 9th Ave N, Regina, SK S4R 8C5</p>
+</footer>
+</body>
+</html>
