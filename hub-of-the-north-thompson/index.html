@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hub of the North Restaurant — Thompson</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; }
+  .brand span { color: var(--accent); }
+  nav a { display: inline-block; min-height: 44px; line-height: 44px; margin-left: 24px; padding: 0 8px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">Hub <span>of the</span> North</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#food">Food</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">111 Churchill Drive, Thompson, Manitoba</p>
+    <h1>Come for the food, stay for the good time.</h1>
+    <p class="lede">Hub of the North is a licensed restaurant and sports lounge in Thompson. Dine in or take out, seven days a week.</p>
+  </div>
+  <section id="about">
+    <h2>About</h2>
+    <p>Hub of the North is a licensed restaurant and sports lounge at 111 Churchill Drive in Thompson, Manitoba. The restaurant serves dine-in and take-out, and the lounge and VLT area keep their own hours.</p>
+  </section>
+  <section id="food">
+    <h2>From the kitchen</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Family Pasta Packs</h3>
+        <p>Family Pasta Packs feed four, with pickup and delivery until 10pm.</p>
+      </div>
+      <div class="card">
+        <h3>Every entrée</h3>
+        <p>Every entrée comes with a salad-bar side salad or homemade soup.</p>
+      </div>
+      <div class="card">
+        <h3>Sports lounge</h3>
+        <p>A sports lounge with VLTs, open daily from 9am.</p>
+      </div>
+    </div>
+  </section>
+  <section id="hours">
+    <h2>Hours</h2>
+    <div class="hours">
+      <p>Restaurant (dine-in &amp; take-out): Monday–Sunday, 11am–10pm<br>Lounge: Monday–Sunday, 9am–10pm<br>VLT: Monday–Sunday, 9am–9:45pm</p>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>111 Churchill Drive,<br>Thompson, Manitoba R8N 0L5</p>
+      <p>Phone: (204) 778-5630<br>Email: thehubonlineordering@hotmail.com</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Hub of the North Restaurant — 111 Churchill Drive, Thompson, Manitoba — (204) 778-5630</p>
+    <p>Demonstration prepared from public information only.</p>
+  </div>
+</footer>
+</body>
+</html>
