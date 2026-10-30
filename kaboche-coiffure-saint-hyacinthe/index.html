@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaboche Coiffure — Saint-Hyacinthe</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; }
+  .brand span { color: var(--accent); }
+  nav a { display: inline-block; min-height: 44px; line-height: 44px; margin-left: 24px; padding: 0 8px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  .hours { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">Kaboche <span>Coiffure</span></div>
+    <nav>
+      <a href="#apropos">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#heures">Heures</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">2556, avenue Ste Anne, Saint-Hyacinthe, Québec</p>
+    <h1>Coiffure pour hommes et femmes, avec ou sans rendez-vous.</h1>
+    <p class="lede">Kaboche Coiffure est un salon de coiffure à Saint-Hyacinthe. Passez nous voir ou prenez rendez-vous — l'équipe vous accueille avec ou sans rendez-vous.</p>
+  </div>
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Kaboche Coiffure est un salon de coiffure homme-femme situé au 2556, avenue Ste Anne, à Saint-Hyacinthe. Le salon travaille avec des produits professionnels.</p>
+  </section>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Pour hommes et femmes</h3>
+        <p>Un salon de coiffure pour hommes et femmes.</p>
+      </div>
+      <div class="card">
+        <h3>Avec ou sans rendez-vous</h3>
+        <p>Passez nous voir ou prenez rendez-vous, selon ce qui vous convient.</p>
+      </div>
+      <div class="card">
+        <h3>Produits professionnels</h3>
+        <p>Le salon travaille avec des produits professionnels.</p>
+      </div>
+    </div>
+  </section>
+  <section id="heures">
+    <h2>Heures d'ouverture</h2>
+    <div class="hours">
+      <p>Dimanche : fermé<br>Lundi : à discuter (sur demande)<br>Mardi à jeudi : 9 h 00 – 21 h 00<br>Vendredi : 9 h 00 – 19 h 00</p>
+      <p>Les heures du samedi ne sont pas indiquées ici — appelez le salon pour confirmer.</p>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>2556, avenue Ste Anne,<br>Saint-Hyacinthe (Québec) J2S 5J3</p>
+      <p>Téléphone : 450 252-1122<br>Courriel : kabochecoiffure@hotmail.com</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Kaboche Coiffure — 2556, avenue Ste Anne, Saint-Hyacinthe — 450 252-1122</p>
+    <p>Démonstration préparée à partir d'informations publiques seulement.</p>
+  </div>
+</footer>
+</body>
+</html>
