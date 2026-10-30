@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deer + Almond — Winnipeg</title>
+<style>
+  :root { --ink: #18181b; --muted: #52525b; --line: #d4d4d8; --paper: #ffffff; --soft: #fafafa; --accent: #b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: Georgia, 'Times New Roman', serif; font-size: 17px; line-height: 1.55; }
+  a { color: var(--accent); }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  header { border-bottom: 1px solid var(--ink); }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+  .topbar { display: flex; justify-content: space-between; align-items: baseline; padding: 24px 0 16px; }
+  .brand { font-size: 28px; font-weight: 700; line-height: 1.05; }
+  .brand span { color: var(--accent); }
+  nav a { display: inline-block; min-height: 44px; line-height: 44px; margin-left: 24px; padding: 0 8px; color: var(--ink); text-decoration: none; font-family: Arial, Helvetica, sans-serif; font-size: 15px; }
+  nav a:hover { text-decoration: underline; }
+  .hero { padding: 64px 0 48px; border-bottom: 1px solid var(--line); }
+  .kicker { font-family: Arial, Helvetica, sans-serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+  h1 { font-size: 56px; line-height: 1.05; margin: 0 0 24px; font-weight: 700; }
+  .lede { font-size: 21px; line-height: 1.55; max-width: 640px; margin: 0; }
+  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 28px; line-height: 1.1; margin: 0 0 24px; }
+  p { margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .card { border-top: 3px solid var(--accent); padding-top: 16px; }
+  .card h3 { font-size: 21px; line-height: 1.2; margin: 0 0 8px; }
+  .card p { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .contact { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.55; }
+  footer { padding: 32px 0 48px; font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: var(--muted); }
+  @media (max-width: 720px) {
+    h1 { font-size: 40px; }
+    .grid { grid-template-columns: 1fr; }
+    nav a { margin-left: 8px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap topbar">
+    <div class="brand">Deer <span>+</span> Almond</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="hero">
+    <p class="kicker">85 Princess Street, Winnipeg, Manitoba</p>
+    <h1>Four dishes, one table, chosen course by course.</h1>
+    <p class="lede">Deer + Almond serves a four-dish dining experience for $90 per person: choose one dish from every category, with an à la carte menu at the bar.</p>
+  </div>
+  <section id="about">
+    <h2>About</h2>
+    <p>Deer + Almond is a small-plates restaurant at 85 Princess Street in Winnipeg. Menus change frequently, so check in with your server for the latest selections. The restaurant is happy to accommodate most allergies and dietary restrictions — let them know in advance of your reservation.</p>
+  </section>
+  <section id="menu">
+    <h2>From the menu</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>To start</h3>
+        <p>Deer tenderloin tataki with nahm jim, fresh herbs, blueberries and peanuts; yellowfin tuna tartare; and “10 for 10” salt &amp; pepper California calamari.</p>
+      </div>
+      <div class="card">
+        <h3>Second course</h3>
+        <p>The silk pappardelle with house-made chilli crisp and pecorino; dna wedge salad; and persimmon &amp; prosciutto with oranges, delicata squash and miso mandarin dressing.</p>
+      </div>
+      <div class="card">
+        <h3>To finish</h3>
+        <p>Grilled pork neck and hot pepper sauce; agnolotti filled with roasted pumpkin &amp; ricotta; burnt maple steelhead trout; and lake Winnipeg pickerel schnitzel — followed by smoked chocolate tart, tres leches cake &amp; tortilla ice cream, or vegan coconut sorbet sundae.</p>
+      </div>
+    </div>
+    <p style="margin-top:32px;">Additionals include “everything” milk buns &amp; onion spread, the best fries &amp; mayo, and dna famous baby potatoes.</p>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>85 Princess Street,<br>Winnipeg, Manitoba, Canada</p>
+      <p>Phone: (204) 504-8562<br>Email: resos.dna@gmail.com</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Deer + Almond — 85 Princess Street, Winnipeg, Manitoba — (204) 504-8562</p>
+    <p>Demonstration prepared from public information only.</p>
+  </div>
+</footer>
+</body>
+</html>
